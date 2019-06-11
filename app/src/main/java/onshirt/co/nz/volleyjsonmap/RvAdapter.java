@@ -3,6 +3,7 @@ package onshirt.co.nz.volleyjsonmap;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +35,14 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(RvAdapter.MyViewHolder holder, int position) {
 
-        Picasso.get().load(dataModelArrayList.get(position).getUrlToImage()).into(holder.iv);
+        String path = dataModelArrayList.get(position).getUrlToImage();
+
+        if (path != null && path.length() > 0) {
+            Picasso.get().load(path).into(holder.iv);
+        }else {
+            // show no image
+        }
+
         holder.title.setText(dataModelArrayList.get(position).getTitle());
         holder.author.setText(dataModelArrayList.get(position).getAuthor());
         holder.description.setText(dataModelArrayList.get(position).getDescription());
