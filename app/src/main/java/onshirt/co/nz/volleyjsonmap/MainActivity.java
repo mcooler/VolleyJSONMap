@@ -47,6 +47,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+//        Button mapButton = findViewById(R.id.view_geo);
+//        mapButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, GeoActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+
         recyclerView = findViewById(R.id.recycler);
 
         fetchingJSON();

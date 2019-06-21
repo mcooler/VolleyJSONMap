@@ -30,10 +30,12 @@ public class DataModel {
 
     public String getUrlToImage() {
         return urlToImage;
-    }
 
+    }
     public void setUrlToImage(String urlToImage) {
         this.urlToImage = urlToImage;
     }
+
+
 }
 
