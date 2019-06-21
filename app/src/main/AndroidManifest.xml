@@ -40,7 +40,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".MapsActivity"></activity>
-        <activity android:name=".GeoActivity"></activity>
     </application>
 
 </manifest>
